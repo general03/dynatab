@@ -1,0 +1,52 @@
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <title>Test</title>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+      <script type="text/javascript" src="dynatab.js"></script>
+      <link rel="stylesheet" type="text/css" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css" />
+		  <link rel="stylesheet" type="text/css" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" />
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+      <script type="text/javascript">
+        $(function() {
+      
+        	dynatab.contentId = Math.random();  
+            dynatab.createTab(
+              'list__css',
+              'content__css',
+              'css',
+              'Text in tab',
+              'ajax.html', 
+              {      
+                "id-tab-section": 12 
+              }
+            );
+      
+        });
+      </script>
+
+    </head>
+  
+  <body>
+
+    <div id="content-search-css">
+
+        <ul class="tabs list__file" data-tab role="tablist">
+        </ul>
+
+        <ul class="tabs list__css hide" data-tab role="tablist">
+        </ul>
+
+        <div class="tabs-content content__file">         
+        </div>
+
+        <div class="tabs-content content__css hide">         
+        </div>
+        
+      </div>
+ 
+    </div>
+
+  </body>    
+</html>

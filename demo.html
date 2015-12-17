@@ -10,7 +10,11 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
       
       <style media="screen" type="text/css">
-
+	.tab-action__close{
+	  padding: 0 !important;
+	  margin-right: 5px;
+	  line-height: 3.6;
+	}
       </style>
       
       <script type="text/javascript">
@@ -20,7 +24,7 @@
 
             dynatab.ajaxType = 'GET';
             dynatab.prefixIdTab = 'css';
-          	dynatab.contentId = 'content-search-css';  
+            dynatab.contentId = 'content-search-css';  
             var idGenerated = Math.round(Math.random() * (9999 - 1) + 1);
             dynatab.createTab(
                 'list__table1',

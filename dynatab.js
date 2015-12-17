@@ -1,6 +1,7 @@
 /*!
  * Dynamic tab management for foundation 5
- * http://github.com/general03
+ *
+ * https://github.com/general03/dynatab.git
  *
  * @author RIGAUDIE David
  * @version 0.0.1
@@ -25,16 +26,16 @@
 	// Create Tab
 	dynatab.createTab = function (tabClass, contentClass, textContentTab, urlAjax, dataAjax) {
 		$.ajax(
-	      {
+	      	{
 	        url : urlAjax,
 	        data: dataAjax,
 	        type: dynatab.ajaxType
-	      }).done(function( data ) {
-	        $('.'+contentClass+' section').removeClass('active');
+	      	}).done(function( data ) {
+	        
+		$('.'+contentClass+' section').removeClass('active');
 
 	        $('.'+contentClass).append(data);
 
-	        // Vient de <input type="hidden" name="id-tab-section" />
 	        var idTable = dynatab.prefixIdTab + '-' + dataAjax["id-tab-section"];
 
 	        var liContent = $('<li class="tab-title active" role="presentational" >')
@@ -64,7 +65,7 @@
 	         }
 	        });
 
-    	}).fail(function(e){console.log(e)});
+    		}).fail(function(e){console.log(e)});
 
 	};
 

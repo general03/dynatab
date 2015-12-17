@@ -1,0 +1,86 @@
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <title>Test</title>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+      <script type="text/javascript" src="dynatab.js"></script>
+      <link rel="stylesheet" type="text/css" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css" />
+		  <link rel="stylesheet" type="text/css" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" />
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+      
+      <style media="screen" type="text/css">
+
+      </style>
+      
+      <script type="text/javascript">
+        $(function() {
+      
+          document.getElementById('#generateTab1').onclick = function (){
+
+            dynatab.ajaxType = 'GET';
+            dynatab.prefixIdTab = 'css';
+          	dynatab.contentId = 'content-search-css';  
+            var idGenerated = Math.round(Math.random() * (9999 - 1) + 1);
+            dynatab.createTab(
+                'list__table1',
+                'content__table1',
+                'Text tab ' + idGenerated,
+                'ajax.php', 
+                { 
+                  "prefix": dynatab.prefixIdTab,     
+                  "id-tab-section": idGenerated
+                }
+            );
+          }
+
+          document.getElementById('#generateTab2').onclick = function (){
+
+            dynatab.ajaxType = 'GET';
+            dynatab.prefixIdTab = 'css';
+            dynatab.contentId = 'content-search-css'; 
+            var idGenerated = Math.round(Math.random() * (9999 - 1) + 1);
+            dynatab.createTab(
+                'list__table2',
+                'content__table2',
+                'Text tab ' + idGenerated,
+                'ajax.php', 
+                { 
+                  "prefix": dynatab.prefixIdTab,     
+                  "id-tab-section": idGenerated
+                }
+            );
+          }
+        });
+      </script>
+
+    </head>
+  
+  <body>
+
+
+    <div id="content-search-css">
+
+        <input type="button" value="Generate one tab" id="#generateTab1"/>
+
+        <ul class="tabs list__table1" data-tab role="tablist">
+        </ul>
+
+        <div class="tabs-content content__table1">         
+        </div>
+
+
+        <input type="button" value="Generate one tab" id="#generateTab2"/>
+
+        <ul class="tabs list__table2" data-tab role="tablist">
+        </ul>
+
+        <div class="tabs-content content__table2">         
+        </div>
+        
+      </div>
+ 
+    </div>
+
+  </body>    
+</html>

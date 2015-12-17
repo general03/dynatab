@@ -65,6 +65,7 @@
 	        });
 
     	}).fail(function(e){console.log(e)});
+
 	};
 
 	// Export dynatab into global space

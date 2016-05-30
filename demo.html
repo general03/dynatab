@@ -34,6 +34,7 @@
             dynatab.ajaxType = 'GET';
             dynatab.prefixIdTab = 'css';
             dynatab.contentId = 'content-search-css';  
+            dynatab.callback = function(){alert('Click done!')};
             var idGenerated = Math.round(Math.random() * (9999 - 1) + 1);
             dynatab.createTab(
                 'list__table1',
@@ -52,6 +53,7 @@
             dynatab.ajaxType = 'GET';
             dynatab.prefixIdTab = 'css';
             dynatab.contentId = 'content-search-css'; 
+            dynatab.callback = function(){};
             var idGenerated = Math.round(Math.random() * (9999 - 1) + 1);
             dynatab.createTab(
                 'list__table2',

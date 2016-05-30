@@ -37,6 +37,7 @@ Add in the `<body>`
 dynatab.ajaxType = 'GET';
 dynatab.prefixIdTab = 'css';
 dynatab.contentId = 'content';  
+dynatab.callback = function(){alert('Loaded table!')};
 var idGenerated = Math.round(Math.random() * (9999 - 1) + 1);
 dynatab.createTab(
     'list__table',
